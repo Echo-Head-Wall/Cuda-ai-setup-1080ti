@@ -20,6 +20,7 @@ i wrote all this instructions after spending 5 days figuring out the perfect set
 Install docker via standard methods
 Ubuntu 22.04
 # Instructions 
+```
    sudo apt purge *nvidia*
    sudo apt purge *cuda*
    sudo apt autoremove
@@ -35,5 +36,8 @@ Ubuntu 22.04
     sudo apt install nvidia-container-toolkit
     sudo nvidia-ctk runtime configure --runtime=docker
     sudo systemctl restart docker
+```
    # To Test use
+   ```
     docker run -ti --name local-ai -p 8080:8080 --gpus all localai/localai:latest-gpu-nvidia-cuda-11
+```
